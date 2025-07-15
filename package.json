@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "tsc && tailwindcss -i ./src/main.css -o ./dist/main.css --minify",
-    "css:watch": "tailwindcss -i ./src/main.css -o ./dist/main.css --watch",
-    "css:build": "tailwindcss -i ./src/main.css -o ./dist/main.css --minify",
+    "build": "tsc && tailwindcss -i ./src/App.css -o ./dist/main.css --minify",
+    "css:watch": "tailwindcss -i ./src/App.css -o ./dist/main.css --watch",
+    "css:build": "tailwindcss -i ./src/App.css -o ./dist/main.css --minify",
     "type-check": "tsc --noEmit",
     "lint": "eslint .",
     "storybook": "storybook dev -p 6006",

@@ -1,4 +1,90 @@
 @import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-avocado-100: oklch(0.99 0 0);
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-grey-cool-25: #f7f8f9;
+  --color-grey-cool-50: #eff0f3;
+  --color-grey-cool-100: #dfe1e6;
+  --color-grey-cool-200: #cacede;
+  --color-grey-cool-300: #b2b8c4;
+  --color-grey-cool-400: #9aa2b2;
+  --color-grey-cool-500: #848da1;
+  --color-grey-cool-600: #707a91;
+  --color-grey-cool-700: #606a7d;
+  --color-grey-cool-800: #525a6a;
+  --color-grey-cool-900: #454b5a;
+  --color-grey-cool-950: #323741;
+  --color-red-600: #d92d20;
+  --color-blue-500: #2e90fa;
+  --color-green-500: #12b76a;
+
+  /* Border Radius */
+  --radius-none: 0px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+  --radius-full: 999px;
+  --radius-default: 6px;
+
+  /* Font Size */
+  --font-xs: 10px;
+  --font-xs-line: 14px;
+  --font-sm: 12px;
+  --font-sm-line: 16px;
+  --font-base: 14px;
+  --font-base-line: 20px;
+  --font-md: 16px;
+  --font-md-line: 24px;
+  --font-lg: 20px;
+  --font-lg-line: 28px;
+  --font-xl: 24px;
+  --font-xl-line: 32px;
+  --font-2xl: 32px;
+  --font-2xl-line: 40px;
+  --font-3xl: 36px;
+  --font-3xl-line: 44px;
+  --font-display: 40px;
+  --font-display-line: 48px;
+
+  /* Spacing */
+  --spacing-px: 1px;
+  --spacing-0: 0px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-7: 28px;
+  --spacing-8: 32px;
+  --spacing-9: 36px;
+  --spacing-10: 40px;
+  --spacing-11: 44px;
+  --spacing-12: 48px;
+  --spacing-13: 56px;
+  --spacing-14: 64px;
+  --spacing-15: 72px;
+  --spacing-16: 80px;
+  --spacing-17: 96px;
+
+  /* Font Family */
+  --font-roboto: 'Roboto', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+
+  /* Font Weight */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
