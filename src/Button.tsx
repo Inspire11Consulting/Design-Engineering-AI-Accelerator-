@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 
 export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg';
-export type ButtonColor = 'red' | 'white' | 'gray';
+export type ButtonColor = 'red' | 'white' | 'primary'; // primary is the base color (#848da1)
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
@@ -17,8 +17,8 @@ const Button: React.FC<ButtonProps> = ({
   children = 'Button',
   leftIcon,
   rightIcon,
-  size = 'xs',
-  color = 'red',
+  size = 'md', // Default to medium, as in Figma
+  color = 'primary', // Default to base color (primary #848da1)
   disabled = false,
   ...props
 }) => {
@@ -27,22 +27,22 @@ const Button: React.FC<ButtonProps> = ({
       className={clsx(
         // Base styles
         'inline-flex items-center justify-center font-roboto font-bold capitalize transition-colors duration-200',
-        
+
         // Color variants
         {
           'bg-red-600 text-white hover:bg-red-700': color === 'red',
           'bg-white text-grey-cool-950 border-2 border-white hover:bg-grey-cool-25': color === 'white',
-          'bg-grey-cool-950 text-white hover:bg-grey-cool-800': color === 'gray',
+          'bg-grey-cool-700 text-white hover:bg-grey-cool-600': color === 'primary',
         },
-        
-        // Size variants
+
+        // Size variants (from Figma, adjust as needed)
         {
-          'h-6 text-xs px-3 py-2 rounded-md gap-1.5': size === 'xs',
-          'h-8 text-sm px-4 py-2 rounded gap-1.5': size === 'sm',
-          'h-11 text-base px-5 py-[11px] rounded-md gap-2': size === 'md',
-          'h-14 text-2xl px-6 py-3 rounded-md gap-2.5': size === 'lg',
+          'h-6 text-xs px-3 py-2 rounded-md gap-1.5': size === 'xs', // 24px
+          'h-8 text-sm px-4 py-2 rounded gap-1.5': size === 'sm',    // 32px
+          'h-11 text-base px-5 py-3 rounded-md gap-2': size === 'md', // 44px (Figma medium)
+          'h-14 text-2xl px-6 py-4 rounded-md gap-2.5': size === 'lg', // 56px
         },
-        
+
         // State variants
         {
           'opacity-30 cursor-not-allowed': disabled,

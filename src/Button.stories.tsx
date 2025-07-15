@@ -11,7 +11,7 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     color: {
       control: { type: 'select' },
-      options: ['red', 'white', 'gray'],
+      options: ['red', 'white', 'primary'],
     },
     size: {
       control: { type: 'select' },
@@ -43,10 +43,10 @@ export const White: Story = {
   },
 };
 
-export const Gray: Story = {
+export const Primary: Story = {
   args: {
-    children: 'Gray Button',
-    color: 'gray',
+    children: 'Primary Button',
+    color: 'primary',
     size: 'md',
   },
 };
@@ -118,3 +118,10 @@ export const HeroPrimaryLarge: Story = {
     size: 'lg',
   },
 };
+
+// Test div to verify Tailwind custom colors
+export const TailwindColorTest = () => (
+  <div className="bg-grey-cool-700 text-grey-cool-100 p-4 rounded mb-4">
+    This is a test of bg-grey-cool-700 and text-grey-cool-100
+  </div>
+);
